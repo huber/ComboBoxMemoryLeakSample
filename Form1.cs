@@ -70,9 +70,10 @@ namespace ComboBoxMemoryLeakSample
         {
             listBox1.Items.Clear();
 
-            if (list != null)
-                foreach (DictionaryEntry item in list)
-                    listBox1.Items.Add(item.Key as TestItem);
+            if (list == null) return;
+
+            foreach (DictionaryEntry item in list)
+                listBox1.Items.Add(item.Key as TestItem);
         }
 
         /// <summary>
